@@ -1,5 +1,5 @@
 ---
-- name: Run apps command - {{appnname}} {{action}} {{packager}}
+- name: Run apps command - {{ appnname }} {{ action }} {{ packager }}
   ansible.builtin.shell: |
     source ~/.dotfiles/source.sh
     apps {{ appname }} {{ action }} {{ packager }}
