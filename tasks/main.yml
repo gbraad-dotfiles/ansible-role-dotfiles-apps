@@ -1,8 +1,8 @@
 ---
-- name: Run apps command - {{appname}} {{action}}
+- name: Run apps command - {{apps_name}} {{apps_action}}
   ansible.builtin.shell: |
     source ~/.dotfiles/source.sh
-    apps {{ appname }} {{ action }}
+    apps {{ apps_name }} {{ apps_action }}
   args:
     executable: /bin/zsh
     chdir: "{{ ansible_env.HOME }}"
