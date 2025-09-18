@@ -1,7 +1,7 @@
 Ansible Galaxy role: `gbraad.dotfiles-apps`
 ===========================================
 
-Runs apps from my dotfiles to install applications.
+Runs `app` from my dotfiles to install applications according to the [application defintions](https://github.com/gbraad-dotfiles/applications). These are Actionfiles specifically to handle application related tasks, like installation, service install, desktop export, etc.
 
 
 ## Usage
@@ -29,9 +29,12 @@ $ ansible-galaxy role install gbraad.dotfiles-apps
   roles:
     - role: gbraad.dotfiles-apps
       vars:
-        appname: brew
+        appname: codium-server
         action: install
 ```
+
+> [!NOTE]
+> `action: install` can be omitted as this is the default
 
 ```shell
 $ ansible-playbook site.yml 
